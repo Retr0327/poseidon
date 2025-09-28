@@ -20,6 +20,7 @@ const (
 	_contextTimeout  = 2 * time.Second
 )
 
+// NewSQLite creates a new SQLite database connection using GORM and manages its lifecycle with Fx.
 func NewSQLite(lc fx.Lifecycle) (*gorm.DB, error) {
 	dsn := filepath.Join(path.ProjectRootDir(), _dbFileName)
 	gdb, err := gorm.Open(sqlite.Open(dsn), &gorm.Config{
