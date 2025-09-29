@@ -5,6 +5,7 @@ import (
 	"strings"
 )
 
+// DisplayTime converts a duration in seconds to a human-readable string format.
 func DisplayTime(seconds int64, granularity ...int) string {
 	gran := 2
 	if len(granularity) > 0 && granularity[0] > 0 {

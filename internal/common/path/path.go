@@ -5,6 +5,7 @@ import (
 	"path/filepath"
 )
 
+// ProjectRootDir returns the root directory of the Go project by locating the go.mod file.
 func ProjectRootDir() string {
 	dir, _ := os.Getwd()
 	for {
